@@ -122,7 +122,7 @@ class _CollectionViewState extends State<CollectionView> {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.grey[900],
+                            color: Colors.white.withOpacity(0.07),
                           ),
                           padding: const EdgeInsets.all(8),
                           child: Center(
@@ -141,7 +141,8 @@ class _CollectionViewState extends State<CollectionView> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         crossAxisSpacing: 10,
-                        mainAxisSpacing: 10),
+                        mainAxisSpacing: 10,
+                        childAspectRatio: 1 / 3),
                     children:
                         snapshot.data!.docs.map((DocumentSnapshot document) {
                       return GestureDetector(
@@ -150,8 +151,7 @@ class _CollectionViewState extends State<CollectionView> {
                             context,
                             MaterialPageRoute(builder: (context) {
                               return ClassView(
-                                (document.data() as dynamic)['ID'],
-                                (document.data() as dynamic)['Name'],
+                                (document.data() as dynamic)['name'],
                               );
                             }),
                           );
@@ -162,7 +162,7 @@ class _CollectionViewState extends State<CollectionView> {
                               color: Colors.grey[900],
                               image: DecorationImage(
                                   image: NetworkImage(
-                                      "https://source.unsplash.com/featured/?${(document.data() as dynamic)['Name']}"),
+                                      "https://source.unsplash.com/featured/?${(document.data() as dynamic)['image']}"),
                                   fit: BoxFit.cover,
                                   colorFilter: ColorFilter.matrix(<double>[
                                     0.2126,
@@ -192,10 +192,10 @@ class _CollectionViewState extends State<CollectionView> {
                             color: Colors.black.withOpacity(0.5),
                             child: Center(
                                 child: new Text(
-                              (document.data() as dynamic)["Name"],
+                              (document.data() as dynamic)["name"],
                               textAlign: TextAlign.center,
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 30),
+                                  TextStyle(color: Colors.white, fontSize: 20),
                             )),
                           ),
                         ),
