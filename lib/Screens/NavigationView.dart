@@ -2,7 +2,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
+import 'CollectionView.dart';
 import 'Home.dart';
+import 'ProfileView.dart';
 
 class NavigationView extends StatefulWidget {
   @override
@@ -15,9 +17,9 @@ class _NavigationViewState extends State<NavigationView> {
   PageController controller = PageController();
 
   List<StatefulWidget> screens = [
+    CollectionView(),
     HomeView(),
-    HomeView(),
-    HomeView(),
+    ProfileView(),
   ];
 
   @override
@@ -29,6 +31,7 @@ class _NavigationViewState extends State<NavigationView> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         extendBody: true,
         body: PageView.builder(
           onPageChanged: (page) {},
@@ -43,13 +46,13 @@ class _NavigationViewState extends State<NavigationView> {
             padding: const EdgeInsets.only(left: 30, right: 30, bottom: 20),
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(10),
               ),
               height: 70,
               child: Container(
                 decoration: new BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.white.withOpacity(0.1)),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white.withOpacity(0.07)),
                 child: new Center(
                   child: SafeArea(
                     child: new Container(
@@ -66,7 +69,7 @@ class _NavigationViewState extends State<NavigationView> {
                               GButton(
                                 gap: 10,
                                 iconActiveColor: Colors.grey[400],
-                                iconColor: Colors.grey[600],
+                                iconColor: Colors.grey[800],
                                 textColor: Colors.grey[400],
                                 iconSize: 24,
                                 padding: EdgeInsets.symmetric(
@@ -76,7 +79,7 @@ class _NavigationViewState extends State<NavigationView> {
                               GButton(
                                 gap: 10,
                                 iconActiveColor: Colors.grey[400],
-                                iconColor: Colors.grey[600],
+                                iconColor: Colors.grey[800],
                                 textColor: Colors.grey[400],
                                 iconSize: 24,
                                 padding: EdgeInsets.symmetric(
@@ -87,7 +90,7 @@ class _NavigationViewState extends State<NavigationView> {
                               GButton(
                                 gap: 10,
                                 iconActiveColor: Colors.grey[400],
-                                iconColor: Colors.grey[600],
+                                iconColor: Colors.grey[800],
                                 textColor: Colors.grey[400],
                                 iconSize: 24,
                                 icon: Icons.list,
