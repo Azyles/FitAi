@@ -49,7 +49,7 @@ class _ClasssState extends State<Classs> {
                   borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
                       image: NetworkImage(
-                          'https://cdn.dribbble.com/users/6024852/screenshots/15593756/media/365eb82411fe7529743dafd0ba2de79d.jpg?compress=1&resize=1200x900'),
+                          'https://cdn.dribbble.com/users/3286391/screenshots/11307272/media/5de995c15a4bd0b7a81dd22f2a835c77.jpg?compress=1&resize=1200x900'),
                       fit: BoxFit.cover)),
               width: MediaQuery.of(context).size.width * 0.55,
               height: MediaQuery.of(context).size.height * 0.35,

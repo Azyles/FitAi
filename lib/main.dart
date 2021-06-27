@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+import 'Screens/ClassProgress.dart';
 import 'Screens/Home.dart';
 import 'auth/auth.dart';
 import 'dart:async';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Classs(),
+      home: ClassProgressView(),
     );
   }
 }
