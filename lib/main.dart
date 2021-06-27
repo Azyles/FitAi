@@ -1,3 +1,4 @@
+import 'package:fitai/Screens/Class.dart';
 import 'package:fitai/Screens/NavigationView.dart';
 import 'package:fitai/auth/auth.dart';
 import 'package:flutter/material.dart';
@@ -7,10 +8,14 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'Screens/Home.dart';
 import 'auth/auth.dart';
+import 'dart:async';
 
-void main() {
+Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(systemNavigationBarColor: Colors.black));
+
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(MyApp());
 }
 
@@ -27,7 +32,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: App(),
+      home: Classs(),
     );
   }
 }

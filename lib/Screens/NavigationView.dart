@@ -1,11 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-
 import 'CollectionView.dart';
 import 'Home.dart';
 import 'ProfileView.dart';
 
+  
 class NavigationView extends StatefulWidget {
   @override
   _NavigationViewState createState() => _NavigationViewState();
